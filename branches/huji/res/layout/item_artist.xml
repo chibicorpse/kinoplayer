@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+ 		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="fill_parent"
+		 android:layout_height="?android:attr/listPreferredItemHeight"
+		 android:background="@color/itemBGcolor" 		 
+		 >
+	
+	<RelativeLayout 
+					android:layout_width="fill_parent"
+		 			android:layout_height="?android:attr/listPreferredItemHeight">
+		
+			<ImageView android:id="@+id/artistItem_aristImage" 
+						android:layout_height="fill_parent"
+						android:layout_width="fill_parent"
+						android:scaleType="centerCrop"						
+			/>				
+									 
+			<RelativeLayout  android:layout_height="fill_parent"
+					android:layout_width="fill_parent"
+					android:background="@drawable/artistbg"></RelativeLayout>
+				
+			<TextView android:id="@+id/artistItem_artistTitle"
+						android:layout_height="wrap_content"
+						android:layout_width="wrap_content"
+						android:text="artistItem_artistTitle"
+						android:textSize="14dp"
+						android:textStyle="bold"
+						android:layout_centerInParent="true"
+						android:textColor="#ffffff"
+						 />							
+
+			
+	</RelativeLayout> 
+</LinearLayout>

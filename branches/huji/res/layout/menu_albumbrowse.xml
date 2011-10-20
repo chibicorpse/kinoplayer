@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"    
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"    
+    >
+    	
+	<ImageView android:id="@+id/menu_albumbrowse_bgimage"
+			    android:layout_width="fill_parent"
+		    	android:layout_height="fill_parent"
+		    	android:scaleType="centerCrop" />	
+		
+		
+	<RelativeLayout android:id="@+id/menu_albumbrowse_topbar"
+					android:layout_width="fill_parent"
+				    android:layout_height="wrap_content"
+				    android:layout_alignParentTop="true"
+	>
+			<com.android.kino.ui.PlayerMini 
+			    android:id="@+id/player_mini"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:visibility="visible"        
+			    android:layout_alignParentTop="true"  
+			     />	
+							
+				<LinearLayout
+						android:id="@+id/menu_albumbrowse_titleContainer"    
+						 android:layout_width="fill_parent"						 
+		 				  android:layout_height="wrap_content"
+		 				  android:orientation="horizontal"  
+		 				  android:gravity="center_horizontal"  
+		 				  android:textColor="#FFFFFF"   
+		 				  android:background="@color/titleBGcolor"
+		 				  android:layout_below="@id/player_mini"	
+							>
+			
+							<TextView android:id="@+id/menu_albumbrowse_artistname" 
+										android:layout_height="wrap_content"
+										android:layout_width="wrap_content"
+										android:gravity="center_horizontal"
+										android:text="Artist Name"
+										android:textSize="18dp"
+										android:textStyle="bold"
+										android:layout_margin="10dp"
+										android:textColor="#FFFFFF"   
+					
+							/>				
+		
+			</LinearLayout>
+	</RelativeLayout>						
+    
+
+          
+   	
+	  <!--  button row -->
+	     <LinearLayout     
+	     	android:id="@+id/menu_buttonrow"
+	        android:orientation="horizontal"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"        
+	        android:layout_alignParentBottom="true"        
+	        android:paddingBottom="5dp"        
+	        android:gravity="center_horizontal"
+	        android:background="@color/btnrowBGcolor"
+	        >
+	        
+		<Button android:id="@+id/btn_return"
+	            android:layout_width="50dp"
+	            android:layout_height="50dp"
+	            android:background="@drawable/icn_return"                          
+	            android:layout_marginRight="30dp"   />                             
+	                        
+	    </LinearLayout>
+   	
+	    	<ListView
+	    android:id="@+id/albumlist"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/menu_albumbrowse_topbar"
+	    android:layout_above="@id/menu_buttonrow"
+	    />
+	    
+	    <TextView
+	    android:id="@+id/txt_nodata"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content"
+	    android:layout_below="@id/menu_albumbrowse_topbar"
+		android:visibility="gone"
+	    />
+	    
+	    
+		 <com.android.kino.ui.StatusUpdater 
+	    android:id="@+id/statusupdater"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"    	    
+	    android:layout_above="@id/menu_buttonrow"  
+	     />
+   	     
+
+</RelativeLayout>
